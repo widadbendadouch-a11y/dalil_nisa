@@ -12,40 +12,20 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.ibb.co/qWhrMwy/image-1.png');
+            background-size: cover;
+            background-position: center;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-            background-color: #0f0f1a;
-        }
-        /* عنصر الصورة كخلفية باش تضمن بلي ضروري غادي تبان 100% */
-        .bg-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
-        /* طبقة مظلمة فوق الصورة باش يبان النص واضح */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.65);
-            z-index: -1;
         }
         .intro-card {
             background: rgba(15, 15, 15, 0.85);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 40px 30px;
             border-radius: 24px;
             max-width: 600px;
@@ -53,65 +33,65 @@
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
             border: 1px solid rgba(255, 218, 121, 0.25);
             text-align: right;
-            position: relative;
-            z-index: 1;
         }
         h1 {
             font-size: 28px;
             margin-bottom: 20px;
             color: #ffda79;
             text-align: center;
+            text-shadow: 0 2px 10px rgba(255, 218, 121, 0.3);
         }
         p {
-            font-size: 15px;
-            line-height: 2;
+            font-size: 16px;
+            line-height: 1.9;
             color: #dcdde1;
             margin-bottom: 20px;
         }
-        .highlight-text {
+        .highlight {
             color: #ffda79;
             font-weight: bold;
         }
-        .back-btn-container {
+        .btn-container {
             text-align: center;
             margin-top: 30px;
         }
         .btn-back {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffda79;
+            padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
             transition: 0.3s;
         }
         .btn-back:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <!-- الصورة محطوطة مباشرة -->
-    <img src="intro-bg.png" alt="Background" class="bg-image">
-    <div class="overlay"></div>
-
     <div class="intro-card">
-        <h1>مقدمة الدليل: لماذا هذا الكتاب صُمم خصيصاً لك؟</h1>
+        <h1>مقدمة: لماذا هذا الدليل؟</h1>
         
         <p>
-            كثير من النساء يعتقدن أن كسب قلب الرجل وعشقه يتطلب مجهوداً شاقاً، أو تنازلات مستمرة. لكن الحقيقة العميقة غير ذلك تماماً. السحر الحقيقي يكمن في <span class="highlight-text">الوعي، وفهم سيكولوجية الرجل الخفية</span>.
+            كثير من النساء يعتقدن أن كسب قلب الرجل يحتاج إلى تنازلات ومجهود جبار لإرضائه، لكن الحقيقة العكس تماماً. الرجل لا يعشق المرأة التي تلغي نفسها من أجله، بل يعشق <span class="highlight">المرأة التي تعرف قيمتها الحقيقية</span> وتملك ذكاء عاطفياً يجعلها حاضرة بقوة في وعيه وفكره حتى في غيابها.
         </p>
         
         <p>
-            في هذا الدليل، لن نعلمك كيف تتصنعين، بل سنأخذك في رحلة واعية لتكتشفي كيف تكوني أنتِ المصدر الأساسي لراحته، سعادته، وتعلقه الأبدي، وكيف تجعلين حضورك لا يُنسى مهما كانت الظروف.
+            هذا الدليل ليس مجرد نصائح عادية، بل هو مفتاح حقيقي لترتيب أفكارك، فهم أعماق نفسية الرجل، وكيفية بناء علاقة متوازنة اساسها الاحترام، الجاذبية، والغموض الجميل الذي يخلق الشغف المستمر.
         </p>
 
-        <div class="back-btn-container">
-            <a href="index.html" class="btn-back">← العودة للرئيسية لطلب نسختك</a>
+        <p>
+            إذا كنتِ جاهزة لتغيير نظرتك للعلاقات وتكتشفي الأسرار الحقيقية للسيطرة على قلب أي رجل بذكاء وأنوثة، فهذا الدليل صُمم خصيصاً لكِ.
+        </p>
+
+        <div class="btn-container">
+            <a href="index.html" class="btn-back">← العودة للصفحة الرئيسية</a>
         </div>
     </div>
 

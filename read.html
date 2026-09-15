@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قراءة الدليل - فن كسب القلوب</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        body {
+            background: #0d0d1a;
+            color: #f5f6fa;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* نافذة الانتظار أو الرفض */
+        #auth-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            padding: 20px;
+        }
+        .auth-box {
+            background: rgba(20, 20, 30, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 218, 121, 0.3);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+        }
+        .auth-box h2 {
+            color: #ffda79;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .auth-box p {
+            color: #dcdde1;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .device-id-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed #ffda79;
+            padding: 12px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 18px;
+            color: #ffda79;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        .btn-whatsapp {
+            display: inline-block;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+            width: 100%;
+        }
+        .btn-whatsapp:hover {
+            opacity: 0.9;
+        }
+        .status-msg {
+            color: #ff6b6b;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        /* محتوى الكتاب (مخفي حتى يتم قبول الهاتف) */
+        #book-content {
+            display: none;
+            max-width: 700px;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 218, 121, 0.2);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+        }
+        h1 {
+            color: #ffda79;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+        h2 {
+            color: #ffda79;
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 218, 121, 0.2);
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 2.2;
+            color: #dcdde1;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .back-home {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .back-home a {
+            color: #ffda79;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px dashed #ffda79;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- نافذة التحقق وقبول الجهاز -->
+    <div id="auth-modal">
+        <div class="auth-box">
+            <h2>منطقة القراءة المحمية</h2>
+            <p>هذه الصفحة خاصة بالزباين الذين تم قبول هواتفهم بعد إتمام الدفع. رقم تعريف هاتفك الحالي هو:</p>
+            
+            <div class="device-id-box" id="my-device-id">جاري التعرف على هاتفك...</div>
+            
+            <p>أرسلي هذا الرقم عبر الواتساب لتأكيد طلبك وقبول جهازك من طرف الإدارة:</p>
+            
+            <a href="#" id="wa-link" class="btn-whatsapp" target="_blank">تواصل عبر الواتساب لتفعيل هاتفك</a>
+            
+            <div class="status-msg" id="status-text">في انتظار موافقة الإدارة على جهازك...</div>
+        </div>
+    </div>
+
+    <!-- محتوى الكتاب (يظهر فور قبول الجهاز) -->
+    <div id="book-content">
+        <h1>فن كسب القلوب - النسخة الكاملة</h1>
+        
+        <h2>الفصل الأول: سيكولوجية الرجل الخفية</h2>
+        <p>
+            حين تفهمين كيف يفكر الرجل بعيداً عن الصور النمطية، تصبحين قادرة على إدارة مشاعره بذكاء هادئ. الرجل لا يبحث عن امرأة تحاول إرضاءه طوال الوقت، بل يبحث عن مرآة صادقة تعكس طاقته وثقته بنفسه.
+        </p>
+        
+        <h2>الفصل الثاني: كيف تجعلينه يتعلق بك دون مجهود</h2>
+        <p>
+            التعلق الحقيقي لا يولد بالضغط أو الإلحاح، بل يولد بالغياب الذكي والحضور الواعي. حين تدركين قيمة نفسك، يشعر الرجل بشكل لاواعي أنه أمام كنز ثمين يجب عليه الحفاظ عليه.
+        </p>
+
+        <h2>الفصل الثالث: فن التواصل والغموض الجذاب</h2>
+        <p>
+            الغموض ليس تصنعاً، بل هو امتلاك حياة خاصة واهتمامات تجعلك دائماً محط اهتمام وفضول. الرجل يعشق التفاصيل الصغيرة التي تكتشفها المرأة ببطء، ويخاف من الكتاب المفتوح الذي قرأ كل صفحاته من اللقاء الأول.
+        </p>
+
+        <div class="back-home">
+            <a href="index.html">← العودة للرئيسية</a>
+        </div>
+    </div>
+
+    <script>
+        // ----------------------------------------------------
+        // قائمة الهواتف المقبولة (هنا فين غاتولي تزيدي كود أي زبونة خلصات وقبلتيها)
+        // ----------------------------------------------------
+        const approvedDevices = [
+            "DEV-DEMO-2026" // مثال تجريبي، زيدي موراه الفاصلة وأضيفي رموز الزباين الحقيقيين بحال هكا: "DEV-1234"
+        ];
+
+        // توليد رقم تعريف ثابت ومميز لكل هاتف/متصفح
+        function getOrCreateDeviceId() {
+            let deviceId = localStorage.getItem("client_device_id");
+            if (!deviceId) {
+                let randomNum = Math.floor(1000 + Math.random() * 9000);
+                deviceId = "DEV-" + randomNum;
+                localStorage.setItem("client_device_id", deviceId);
+            }
+            return deviceId;
+        }
+
+        window.onload = function() {
+            let currentDevice = getOrCreateDeviceId();
+            
+            // عرض رقم التعريف للزبونة
+            document.getElementById("my-device-id").innerText = currentDevice;
+            
+            // ربط زر الواتساب أوتوماتيكياً بصيفط الرقم ديالها مباشرة لعندك
+            let waMsg = encodeURIComponent("سلام، هدا هو رقم تعريف هاتفي لتفعيل الدفع لدليل فن كسب القلوب: " + currentDevice);
+            document.getElementById("wa-link").href = "https://wa.me/212776636639?text=" + waMsg;
+
+            // التحقق واش الجهاز كاين في القائمة المقبولة (Approved)
+            if (approvedDevices.includes(currentDevice)) {
+                document.getElementById("auth-modal").style.display = "none";
+                document.getElementById("book-content").style.display = "block";
+            } else {
+                document.getElementById("status-text").innerText = "هاتفك غير مفعل بعد. أرسلي رقم التعريف أعلاه عبر الواتساب لتتم الموافقة عليه.";
+            }
+        };
+
+        // حماية ضد النسخ والنقر بالزر الأيمن
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            if (event.ctrlKey && (event.key === 'c' || event.key === 'u' || event.key === 's')) {
+                event.preventDefault();
+                alert("هذه المحتويات محمية لحفظ حقوق الملكية الفكرية.");
+            }
+        });
+    </script>
+
+</body>
+</html>
