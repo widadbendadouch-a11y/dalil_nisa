@@ -12,8 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            /* الصورة غاتهز مباشرة من ملفك المحلي couple.png */
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('couple.png');
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.ibb.co/689L53H/image-2.png');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -82,11 +81,16 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            padding: 15px 35px;
+            padding: 14px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -94,9 +98,17 @@
             transition: 0.3s;
             box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
         }
+        .btn-intro {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffda79;
+        }
         .btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+        .btn-intro:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -118,8 +130,13 @@
 
         <div class="price-tag">ثمن النسخة: 5 أورو فقط</div>
 
-        <!-- زر الواتساب برقمك الشخصي -->
-        <a href="https://wa.me/212776636639?text=سلام، بغيت نشري دليل فن كسب القلوب ب 5 أورو" class="btn" target="_blank">احصلي على نسختك عبر الواتساب</a>
+        <div class="buttons-container">
+            <!-- زر الشراء عبر الواتساب -->
+            <a href="https://wa.me/212776636639?text=سلام، بغيت نشري دليل فن كسب القلوب ب 5 أورو" class="btn" target="_blank">احصلي على نسختك عبر الواتساب</a>
+            
+            <!-- زر الانتقال لصفحة المقدمة -->
+            <a href="intro.html" class="btn btn-intro">اقرئي المقدمة أولاً</a>
+        </div>
     </div>
 
 </body>
