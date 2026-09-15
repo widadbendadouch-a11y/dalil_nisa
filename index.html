@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل فن كسب القلوب</title>
+    <title>دليل فن كسب القلوب - العلاقات الذكية</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518156269907-76c198aa3459?q=80&w=1000&auto=format&fit=crop');
+            /* الصورة غاتهز مباشرة من ملفك المحلي couple.png */
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('couple.png');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -22,54 +23,103 @@
             color: #fff;
             padding: 20px;
         }
-        .card {
-            background: rgba(15, 15, 15, 0.85);
+        .landing-card {
+            background: rgba(15, 15, 15, 0.82);
             backdrop-filter: blur(12px);
-            padding: 35px;
-            border-radius: 20px;
-            max-width: 500px;
+            -webkit-backdrop-filter: blur(12px);
+            padding: 40px 30px;
+            border-radius: 24px;
+            max-width: 550px;
             width: 100%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 218, 121, 0.25);
             text-align: center;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
             color: #ffda79;
-            font-size: 26px;
-            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(255, 218, 121, 0.3);
+        }
+        .subtitle {
+            font-size: 17px;
+            color: #f5f6fa;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
         p {
-            color: #f1f2f6;
             font-size: 15px;
             line-height: 1.8;
-            margin-bottom: 20px;
+            color: #dcdde1;
+            margin-bottom: 25px;
         }
-        .price {
+        .features-list {
+            text-align: right;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .features-list li {
+            list-style: none;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #f5f6fa;
+            position: relative;
+            padding-right: 22px;
+        }
+        .features-list li::before {
+            content: "✓";
             color: #ffda79;
-            font-size: 20px;
+            position: absolute;
+            right: 0;
             font-weight: bold;
+        }
+        .price-tag {
+            font-size: 20px;
+            color: #ffda79;
             margin-bottom: 20px;
+            font-weight: bold;
         }
         .btn {
             display: inline-block;
-            background: #25D366;
+            background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            padding: 14px 30px;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
+    <div class="landing-card">
         <h1>فن كسب القلوب</h1>
-        <p>اكتشفي أسرار العلاقات الذكية وكيف تجعلين الرجل يتعلق بك بحرارة وبوعي تام. هذا الدليل هو مفتاحك لعلاقة ناجحة ومستدامة.</p>
-        <div class="price">ثمن النسخة: 5 أورو فقط</div>
-        <a href="https://wa.me/212776636639?text=سلام، بغيت نشري دليل فن كسب القلوب" class="btn" target="_blank">احصلي على نسختك عبر الواتساب</a>
+        <div class="subtitle">أسرار العلاقات الذكية وكيف تجعلينه يعشقك</div>
+        
+        <p>
+            دليل تقرأه المرأة.. لكن ينعكس أثره على الرجل، وعلى علاقتك، وعلى حياتك كلها! اكتشفي كيف تجعلين الرجل يتعلق بك بحرارة وبوعي تام.
+        </p>
+
+        <ul class="features-list">
+            <li>تعرفي على وعي ونفسية الرجل وكيف تجذبي اهتمامه بكل سهولة.</li>
+            <li>اكتشفي مكانتك الحقيقية في العلاقة بذكاء وثقة بالنفس.</li>
+            <li>أسرار عملية لتكوني المرأة الاستثنائية التي لا تُنسى.</li>
+        </ul>
+
+        <div class="price-tag">ثمن النسخة: 5 أورو فقط</div>
+
+        <!-- زر الواتساب برقمك الشخصي -->
+        <a href="https://wa.me/212776636639?text=سلام، بغيت نشري دليل فن كسب القلوب ب 5 أورو" class="btn" target="_blank">احصلي على نسختك عبر الواتساب</a>
     </div>
 
 </body>
