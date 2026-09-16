@@ -22,7 +22,7 @@
             justify-content: center;
             align-items: center;
         }
-        /* نافذة الانتظار أو الرفض */
+        /* نافذة التحقق وقبول الجهاز */
         #auth-modal {
             position: fixed;
             top: 0;
@@ -80,9 +80,6 @@
             transition: 0.3s;
             width: 100%;
         }
-        .btn-whatsapp:hover {
-            opacity: 0.9;
-        }
         .status-msg {
             color: #ff6b6b;
             font-size: 13px;
@@ -92,31 +89,34 @@
         /* محتوى الكتاب (مخفي حتى يتم قبول الهاتف) */
         #book-content {
             display: none;
-            max-width: 700px;
+            max-width: 750px;
             width: 100%;
-            background: rgba(15, 15, 15, 0.9);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 218, 121, 0.2);
+            background: rgba(15, 15, 15, 0.93);
+            padding: 50px 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 218, 121, 0.25);
             box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            margin: 20px 0;
         }
-        h1 {
+        .book-title {
             color: #ffda79;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 26px;
+            margin-bottom: 40px;
+            font-size: 30px;
+            border-bottom: 2px solid rgba(255, 218, 121, 0.3);
+            padding-bottom: 15px;
         }
-        h2 {
+        .chapter-title {
             color: #ffda79;
-            font-size: 20px;
-            margin-top: 25px;
+            font-size: 22px;
+            margin-top: 35px;
             margin-bottom: 15px;
             border-bottom: 1px solid rgba(255, 218, 121, 0.2);
             padding-bottom: 8px;
         }
         p {
             font-size: 16px;
-            line-height: 2.2;
+            line-height: 2.3;
             color: #dcdde1;
             margin-bottom: 20px;
             text-align: justify;
@@ -128,7 +128,7 @@
         .back-home a {
             color: #ffda79;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 15px;
             border-bottom: 1px dashed #ffda79;
         }
     </style>
@@ -151,39 +151,34 @@
         </div>
     </div>
 
-    <!-- محتوى الكتاب (يظهر فور قبول الجهاز) -->
+    <!-- محتوى الكتاب الحقيقي -->
     <div id="book-content">
-        <h1>فن كسب القلوب - النسخة الكاملة</h1>
+        <h1 class="book-title">دليل فن كسب القلوب</h1>
         
-        <h2>الفصل الأول: سيكولوجية الرجل الخفية</h2>
+        <h2 class="chapter-title">الفصل الأول: سيكولوجية الرجل الخفية</h2>
         <p>
-            حين تفهمين كيف يفكر الرجل بعيداً عن الصور النمطية، تصبحين قادرة على إدارة مشاعره بذكاء هادئ. الرجل لا يبحث عن امرأة تحاول إرضاءه طوال الوقت، بل يبحث عن مرآة صادقة تعكس طاقته وثقته بنفسه.
-        </p>
-        
-        <h2>الفصل الثاني: كيف تجعلينه يتعلق بك دون مجهود</h2>
-        <p>
-            التعلق الحقيقي لا يولد بالضغط أو الإلحاح، بل يولد بالغياب الذكي والحضور الواعي. حين تدركين قيمة نفسك، يشعر الرجل بشكل لاواعي أنه أمام كنز ثمين يجب عليه الحفاظ عليه.
+            اكتبي هنا النص أو الفقرات الحقيقية الخاصة بالفصل الأول من كتابك بكل حرية...
         </p>
 
-        <h2>الفصل الثالث: فن التواصل والغموض الجذاب</h2>
+        <h2 class="chapter-title">الفصل الثاني: عنوان الفصل الثاني هنا</h2>
         <p>
-            الغموض ليس تصنعاً، بل هو امتلاك حياة خاصة واهتمامات تجعلك دائماً محط اهتمام وفضول. الرجل يعشق التفاصيل الصغيرة التي تكتشفها المرأة ببطء، ويخاف من الكتاب المفتوح الذي قرأ كل صفحاته من اللقاء الأول.
+            اكتبي هنا النص أو الفقرات الحقيقية الخاصة بالفصل الثاني من كتابك...
         </p>
 
         <div class="back-home">
-            <a href="index.html">← العودة للرئيسية</a>
+            <a href="index.html">← العودة للصفحة الرئيسية</a>
         </div>
     </div>
 
     <script>
         // ----------------------------------------------------
-        // قائمة الهواتف المقبولة (هنا فين غاتولي تزيدي كود أي زبونة خلصات وقبلتيها)
+        // لوحة الإدارة اليدوية: هنا فين غاتولي تقبلي الهواتف
         // ----------------------------------------------------
         const approvedDevices = [
-            "DEV-DEMO-2026" // مثال تجريبي، زيدي موراه الفاصلة وأضيفي رموز الزباين الحقيقيين بحال هكا: "DEV-1234"
+            "DEV-DEMO-2026" // هذا مثال تجريبي فقط
+            // منين تشري شي زبونة، غاتزيدي الرقم ديالها هنا بحال هكا: , "DEV-xxxx"
         ];
 
-        // توليد رقم تعريف ثابت ومميز لكل هاتف/متصفح
         function getOrCreateDeviceId() {
             let deviceId = localStorage.getItem("client_device_id");
             if (!deviceId) {
@@ -196,15 +191,11 @@
 
         window.onload = function() {
             let currentDevice = getOrCreateDeviceId();
-            
-            // عرض رقم التعريف للزبونة
             document.getElementById("my-device-id").innerText = currentDevice;
             
-            // ربط زر الواتساب أوتوماتيكياً بصيفط الرقم ديالها مباشرة لعندك
-            let waMsg = encodeURIComponent("سلام، هدا هو رقم تعريف هاتفي لتفعيل الدفع لدليل فن كسب القلوب: " + currentDevice);
+            let waMsg = encodeURIComponent("سلام، هذا هو رقم تعريف هاتفي لتفعيل الدفع لدليل فن كسب القلوب: " + currentDevice);
             document.getElementById("wa-link").href = "https://wa.me/212776636639?text=" + waMsg;
 
-            // التحقق واش الجهاز كاين في القائمة المقبولة (Approved)
             if (approvedDevices.includes(currentDevice)) {
                 document.getElementById("auth-modal").style.display = "none";
                 document.getElementById("book-content").style.display = "block";
@@ -213,7 +204,7 @@
             }
         };
 
-        // حماية ضد النسخ والنقر بالزر الأيمن
+        // حماية ضد النسخ
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('keydown', event => {
             if (event.ctrlKey && (event.key === 'c' || event.key === 'u' || event.key === 's')) {
@@ -222,6 +213,5 @@
             }
         });
     </script>
-
 </body>
 </html>
