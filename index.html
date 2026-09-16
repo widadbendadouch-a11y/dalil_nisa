@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل فن كسب القلوب - العلاقات الذكية</title>
+    <title>فن كسب القلوب - الدليل الشامل</title>
     <style>
         * {
             margin: 0;
@@ -12,101 +12,93 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.ibb.co/qWhrMwy/image-1.png');
-            background-size: cover;
-            background-position: center;
+            background: #0d0d1a;
+            color: #f5f6fa;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
             padding: 20px;
         }
-        .landing-card {
-            background: rgba(15, 15, 15, 0.82);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(20, 20, 30, 0.95);
             padding: 40px 30px;
             border-radius: 24px;
-            max-width: 550px;
-            width: 100%;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(255, 218, 121, 0.25);
+            border: 1px solid rgba(255, 218, 121, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
             text-align: center;
         }
         h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
             color: #ffda79;
-            text-shadow: 0 2px 10px rgba(255, 218, 121, 0.3);
+            font-size: 26px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
         .subtitle {
-            font-size: 17px;
-            color: #f5f6fa;
-            margin-bottom: 20px;
+            color: #ffda79;
+            font-size: 15px;
+            margin-bottom: 25px;
             font-weight: 600;
         }
         p {
-            font-size: 15px;
-            line-height: 1.8;
             color: #dcdde1;
-            margin-bottom: 25px;
-        }
-        .features-list {
-            text-align: right;
-            background: rgba(255, 255, 255, 0.04);
-            padding: 18px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .features-list li {
-            list-style: none;
-            margin-bottom: 10px;
             font-size: 14px;
-            color: #f5f6fa;
-            position: relative;
-            padding-right: 22px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
         }
-        .features-list li::before {
+        .features-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 218, 121, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+        .features-box ul {
+            list-style: none;
+        }
+        .features-box li {
+            color: #dcdde1;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .features-box li::before {
             content: "✓";
             color: #ffda79;
-            position: absolute;
-            right: 0;
             font-weight: bold;
+            margin-left: 10px;
         }
-        .price-tag {
-            font-size: 20px;
+        .price {
             color: #ffda79;
-            margin-bottom: 20px;
+            font-size: 18px;
             font-weight: bold;
-        }
-        .buttons-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            margin-bottom: 25px;
         }
         .btn {
-            display: inline-block;
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 15px;
+            text-decoration: none;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .btn-whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
-            padding: 14px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            transition: 0.3s;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-        }
-        .btn-intro {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #ffda79;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
         }
         .btn-read {
             background: linear-gradient(135deg, #f39c12, #d35400);
-            box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
             color: white;
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
         }
         .btn:hover {
             transform: translateY(-2px);
@@ -116,7 +108,7 @@
 </head>
 <body>
 
-    <div class="landing-card">
+    <div class="container">
         <h1>فن كسب القلوب</h1>
         <div class="subtitle">أسرار العلاقات الذكية وكيف تجعلينه يعشقك</div>
         
@@ -124,24 +116,25 @@
             دليل تقرأه المرأة.. لكن ينعكس أثره على الرجل، وعلى علاقتك، وعلى حياتك كلها! اكتشفي كيف تجعلين الرجل يتعلق بك بحرارة وبوعي تام.
         </p>
 
-        <ul class="features-list">
-            <li>تعرفي على وعي ونفسية الرجل وكيف تجذبي اهتمامه بكل سهولة.</li>
-            <li>اكتشفي مكانتك الحقيقية في العلاقة بذكاء وثقة بالنفس.</li>
-            <li>أسرار عملية لتكوني المرأة الاستثنائية التي لا تُنسى.</li>
-        </ul>
-
-        <div class="price-tag">ثمن النسخة: 5 أورو فقط</div>
-
-        <div class="buttons-container">
-            <!-- زر الشراء عبر الواتساب -->
-            <a href="https://wa.me/212776636639?text=سلام، بغيت نشري دليل فن كسب القلوب ب 5 أورو" class="btn" target="_blank">احصلي على نسختك عبر الواتساب</a>
-            
-            <!-- زر قراءة الكتاب (للزبونات اللواتي تمت الموافقة على هواتفهن) -->
-            <a href="read.html" class="btn btn-read">تمت الموافقة على هاتفك؟ اضغطي هنا لقراءة الكتاب</a>
-            
-            <!-- زر الانتقال لصفحة المقدمة -->
-            <a href="intro.html" class="btn btn-intro">اقرئي المقدمة أولاً</a>
+        <div class="features-box">
+            <ul>
+                <li>تعرفي على وعي ونفسية الرجل وكيف تجذبي اهتمامه بكل سهولة.</li>
+                <li>اكتشفي مكانتك الحقيقية في العلاقة بذكاء وثقة بالنفس.</li>
+                <li>أسرار عملية لتكوني المرأة الاستثنائية التي لا تنسى.</li>
+            </ul>
         </div>
+
+        <div class="price">ثمن النسخة: 5 أورو فقط</div>
+
+        <!-- زر طلب النسخة عبر الواتساب (كيتوجها لرقمك) -->
+        <a href="https://wa.me/212776636639?text=سلام، أريد الحصول على نسختي من دليل فن كسب القلوب" class="btn btn-whatsapp" target="_blank">
+            احصلي على نسختك عبر الواتساب
+        </a>
+
+        <!-- زر قراءة الكتاب (مقاد دابا باش يدّي لصفحة read.html) -->
+        <a href="read.html" class="btn btn-read">
+            تمت الموافقة على هاتفك؟ اضغطي هنا لقراءة الكتاب
+        </a>
     </div>
 
 </body>
